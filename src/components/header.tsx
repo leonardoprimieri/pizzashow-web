@@ -1,5 +1,4 @@
 import { Home, Pizza, UtensilsCrossed } from 'lucide-react'
-import { Link } from 'react-router-dom'
 
 import { AccountMenu } from './account-menu'
 import { NavLink } from './nav-link'
