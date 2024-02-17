@@ -1,4 +1,4 @@
-import { httpClient } from '@/lib/axios'
+import { httpClient } from '@/lib/http-client'
 
 export type SignInBody = {
   email: string
