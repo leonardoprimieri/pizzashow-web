@@ -5,7 +5,9 @@ export type SignInBody = {
 }
 
 export const signIn = async ({ email }: SignInBody) => {
-  await httpClient.post('/authenticate', {
+  const response = await httpClient.post('/authenticate', {
     email,
   })
+
+  return response.data
 }

@@ -35,11 +35,13 @@ export const SignInPage = () => {
 
   const handleSignIn = async (values: SignInFormValues) => {
     await mutateAsync({ email: values.email })
-      .then(() => {
-        toast.success('Enviamos um link de autenticação para seu e-mail!', {
+      .then(({ authLink }) => {
+        toast.success('Clique no link para fazer login', {
           action: {
-            label: 'Reenviar',
-            onClick: () => handleSignIn(values),
+            label: 'Entrar',
+            onClick: () => {
+              window.location.href = authLink
+            },
           },
         })
       })
